@@ -1,0 +1,306 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/kopubbatang.css);
+
+
+* {
+  font-family: 'KoPub Batang', serif;
+  outline:0 !important;
+}
+
+html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,menu,nav,section,article,aside,
+dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {
+  margin:0;
+  padding:0;
+}
+
+html, body {
+  width:100%;
+  font-size:20px;
+  /* rem 단위를 사용 */
+}
+
+html {
+  -webkit-touch-callout:none; /* 탭하거나 꾹 누르는 경우 (롱터치) 보여지는 기본 ui를 제어하는 속성이다. iOS에서 터치 동작을 막고 싶을 때 사용 */
+  /* -webkit-user-select:none; /* 드래그나 더블 클릭해서 텍스트의 선택을 하지 못하게 함 */
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 화면을 탭할 때 하이라이트가 생기는 것을 없앰 */
+}
+
+body { 
+  width:100%; 
+  background:#fff; 
+  min-width:320px;/* 모바일 */ 
+  -webkit-text-size-adjust:none;/* 아이폰의 경우 뷰포트가 변경되면 자동으로 폰트 크기가 변경됨 */
+  word-wrap:break-word; /* 가로 영역을 넘치는 단어에 대해 분리를 어떻게 할것인지 (띄어쓰지 않아도 줄바뀜) */
+  word-break:break-all; /* 위와 비슷한 줄바꿈 */
+  line-height:1;
+  overflow-x:hidden;
+  /* PC 사이트에서는 사용하지 말고, 반응형일때만 사용 */
+}
+
+body,input,select,textarea,button {
+  border:none;
+  font-size:14px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color:#000;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-size:inherit;
+  font-weight:normal;
+}
+
+ul,ol,li {
+  list-style:none;
+}
+
+table { 
+  width:100%;
+  border-spacing:0;
+  border-collapse:collapse;
+}
+
+img,fieldset {
+  border:none;
+}
+
+address,cite,code,em {
+  font-style:normal;
+  font-weight:normal;
+}
+
+label,img,input,select,textarea,button {
+  vertical-align:middle;
+}
+
+.hide ,caption, legend {
+  line-height:0;
+  font-size:1px;
+  overflow:hidden;
+  width: 0px;
+  height: 0px;
+  display: block;
+}
+
+hr {
+  display:none;
+}
+
+main,header,section,nav,footer,aside,article,figure {
+  display:block;
+}
+
+a {
+  color:#000;
+  text-decoration:none;
+}
+
+/* Form */
+
+textarea { 
+  border:1px solid #dbdbdb;
+  resize:none;
+}
+
+select { 
+  height:32px; 
+  font-size:13px; 
+  color:#373737; 
+  border:1px solid #e9e9e9; 
+  background:#fff;
+  border-radius:5px;
+}
+
+input[type=tel],
+input[type=time],
+input[type=text],
+input[type=password],
+input[type=search],
+input[type=email],
+input[type=file],
+input[type=url],
+input[type=number],
+input[type=date],textarea {
+  width:100%; 
+  height:30px; 
+  font-size:14px; 
+  color:#3f51b5; 
+  border:none; 
+  background:transparent;       
+  vertical-align:middle;
+  border-bottom:1px solid #262626;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color:#3f51b5; 
+  font-size:14px; 
+  line-height:1;
+  font-weight:100;
+}
+
+textarea { 
+  padding:5px 0;
+}
+
+select:focus,
+textarea:focus,
+input:focus { 
+}
+
+input[type=tel][readonly],
+input[type=text][readonly],
+input[type=password][readonly],
+input[type=email][readonly], 
+input[type=search][readonly], 
+input[type=tel][disabled],
+input[type=text][disabled],
+input[type=password][disabled],
+input[type=search][disabled],
+input[type=email][disabled]{
+  background:#eaeaea; 
+  border-color:#c0c0c0; 
+  color:#666; 
+  -webkit-appearance:none;
+  font-size:12px;
+}
+
+textarea[readonly],
+textarea[disabled]{ 
+  padding:11px; 
+  font-size:16px; 
+  color:#666; 
+  font-weight:normal; 
+  line-height:1.4; 
+  height:78px; 
+  background:#eaeaea;
+  border:1px solid #c0c0c0;
+}
+
+
+
+/* 공통영역 */
+
+.fixed {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.clear {
+  clear:both;
+}
+
+.clear::after { 
+  content:""; 
+  display:block; 
+  clear:both;
+}
+
+.inner {
+  width:1200px;
+  margin:0 auto;
+}
+
+.sec_title {
+  font-size:1.7rem;
+  /* 34px */
+  font-weight:700;
+  color:#333;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom:.8rem;
+  /* 16px */
+  opacity:0;
+  position: relative;
+  top:30px;
+  transition:.5s;
+}
+
+.sec_title.on {
+  opacity: 1;
+  top:0;
+}
+
+.sub_title {
+  text-align: center;
+  color: #969696;
+  font-weight: 300;
+  font-size: 1.1rem;
+  /* 22px */
+  opacity: 0;
+  position: relative;
+  top: 30px;
+  transition: .5s;
+  transition-delay:.1s;
+}
+
+.sub_title.on {
+  top: 0;
+  opacity: 1;
+}
+
+.sec_title.left,
+.sub_title.left {
+  text-align: left;
+}
+
+.title_wrap {
+  position: relative;
+}
+
+.title_wrap:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top:2.5rem;
+  width: 100%;
+  height: 1px;
+  background:#e6efec;
+}
+
+.more {
+  position: absolute;
+  right: 0;
+  top:-13px;
+  width: 2.7rem;
+  height: 2.7rem;
+  border: 5px solid #d8d8d8;
+  text-indent: -9999em;
+  transition:.3s;
+}
+
+.more::before {
+  content: '';
+  position: absolute;
+  left: -.5rem;
+  top: -.5rem;
+  width: 100%;
+  height: 100%;
+  border: 1px solid#d8d8d8;
+  transition: .5s;
+  z-index:-1;
+}
+
+.more:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url(../images/more_plus.png)no-repeat 0 0 / 100%;
+  transition: .5s;
+}
+
+.more:hover {
+  border-color: #0f7258;
+}
+
+.more:hover:before {
+  left: 0;
+  top: 0;
+  opacity:0;
+}
+
+.more:hover:after {
+  transform: translate(-50%,-50%) rotate(90deg);
+}
